@@ -11,9 +11,8 @@ namespace UAPA.FactConsultorio.Domain
 
     public class AuditableEntityBase : EntityBase, IAuditable
     {
-        public int CreatedBy { get; set; }
-        public DateTime DateCreated { get; set; } = DateTime.UtcNow;
+        public DateTime DateCreated { get; set; }
         public int UpdatedBy { get; set; }
-        public DateTime DateUpdated { get; set; }
+        public DateTime DateUpdated { get; set; } = DateTime.UtcNow;
     }
 }

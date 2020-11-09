@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UAPA.FactConsultorio.Domain.Entities;
+using UAPA.FactConsultorio.Domain.Enums;
 
 namespace UAPA.FactConsultorio.WinForms
 {
@@ -15,6 +17,13 @@ namespace UAPA.FactConsultorio.WinForms
         public MainForm()
         {
             InitializeComponent();
+            lblUserName.Text = LoggedUser.Name;
+            lblUserRole.Text = LoggedUser.Role;
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
