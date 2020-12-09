@@ -17,6 +17,16 @@ namespace UAPA.FactConsultorio.WinForms
         public MainForm()
         {
             InitializeComponent();
+            ValidateUser();
+        }
+
+        private void ValidateUser()
+        {
+            if (LoggedUser.Role == nameof(UserRoles.Cashier))
+            {
+                btnSysAdmin.Visible = false;
+                btnReports.Visible = false;
+            }
             lblUserName.Text = LoggedUser.Name;
             lblUserRole.Text = LoggedUser.Role;
         }

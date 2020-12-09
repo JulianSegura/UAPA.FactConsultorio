@@ -46,7 +46,6 @@ namespace UAPA.FactConsultorio.Services
             }
             catch (Exception)
             {
-
                 return false;
             }
         }
@@ -66,7 +65,7 @@ namespace UAPA.FactConsultorio.Services
                 }
                 return false;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }

@@ -19,6 +19,11 @@ namespace UAPA.FactConsultorio.Data
         }
 
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<Receipt> Receipts { get; set; }
+        public virtual DbSet<ReceiptLine> ReceiptLines { get; set; }
+        public virtual DbSet<Payment> Payments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -53,7 +58,18 @@ namespace UAPA.FactConsultorio.Data
                     Enabled = true,
                     UserRole = (int)UserRoles.Administrator,
                     Locked = false
-                }); ;
+                },
+
+                new User
+                {
+                    Id = 2,
+                    Name = "CASHIER",
+                    UserName = "cajero".ToUpper(),
+                    Password = Encoding.ASCII.GetString(new System.Security.Cryptography.SHA256Managed().ComputeHash(Encoding.ASCII.GetBytes("123456"))),
+                    Enabled = true,
+                    UserRole = (int)UserRoles.Cashier,
+                    Locked = false
+                });
         }
     }
 }
