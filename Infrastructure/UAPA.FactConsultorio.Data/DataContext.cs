@@ -19,6 +19,11 @@ namespace UAPA.FactConsultorio.Data
         }
 
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<Receipt> Receipts { get; set; }
+        public virtual DbSet<ReceiptLine> ReceiptLines { get; set; }
+        public virtual DbSet<Payment> Payments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

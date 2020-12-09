@@ -6,14 +6,14 @@ namespace UAPA.FactConsultorio.Domain.Entities
 {
     public class Receipt:AuditableEntityBase
     {
-        public int PatientId { get; set; }
         public decimal ReceiptTotal { get; set; }
         public decimal PaymentTotal { get; set; }
-        public int CashierId { get; set; }
         public string Comments { get; set; }
 
         #region Navigation
         public virtual ICollection<ReceiptLine> Details { get; set; } = new List<ReceiptLine>();
+        public virtual Patient Patient { get; set; }
+        public virtual User Cashier { get; set; }
         #endregion
     }
 
