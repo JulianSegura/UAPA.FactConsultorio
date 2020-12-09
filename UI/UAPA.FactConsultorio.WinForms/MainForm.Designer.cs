@@ -32,7 +32,7 @@ namespace UAPA.FactConsultorio.WinForms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSysAdmin = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
             this.btnPatients = new System.Windows.Forms.Button();
             this.btnInvoicing = new System.Windows.Forms.Button();
             this.pnlUserInfo = new System.Windows.Forms.Panel();
@@ -47,7 +47,7 @@ namespace UAPA.FactConsultorio.WinForms
             // pnlMenu
             // 
             this.pnlMenu.Controls.Add(this.btnSysAdmin);
-            this.pnlMenu.Controls.Add(this.button2);
+            this.pnlMenu.Controls.Add(this.btnReports);
             this.pnlMenu.Controls.Add(this.btnPatients);
             this.pnlMenu.Controls.Add(this.btnInvoicing);
             this.pnlMenu.Controls.Add(this.pnlUserInfo);
@@ -74,22 +74,22 @@ namespace UAPA.FactConsultorio.WinForms
             this.btnSysAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSysAdmin.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnReports
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(0, 272);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 50);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Informes";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnReports.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
+            this.btnReports.Location = new System.Drawing.Point(0, 272);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(191, 50);
+            this.btnReports.TabIndex = 3;
+            this.btnReports.Text = "Informes";
+            this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReports.UseVisualStyleBackColor = false;
             // 
             // btnPatients
             // 
@@ -198,7 +198,7 @@ namespace UAPA.FactConsultorio.WinForms
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.PictureBox pbUserPicture;
         private System.Windows.Forms.Button btnSysAdmin;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnPatients;
     }
 }

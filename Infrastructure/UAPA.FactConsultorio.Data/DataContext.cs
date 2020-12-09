@@ -53,7 +53,18 @@ namespace UAPA.FactConsultorio.Data
                     Enabled = true,
                     UserRole = (int)UserRoles.Administrator,
                     Locked = false
-                }); ;
+                },
+
+                new User
+                {
+                    Id = 2,
+                    Name = "CASHIER",
+                    UserName = "cajero".ToUpper(),
+                    Password = Encoding.ASCII.GetString(new System.Security.Cryptography.SHA256Managed().ComputeHash(Encoding.ASCII.GetBytes("123456"))),
+                    Enabled = true,
+                    UserRole = (int)UserRoles.Cashier,
+                    Locked = false
+                });
         }
     }
 }
