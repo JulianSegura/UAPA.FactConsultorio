@@ -171,7 +171,9 @@ namespace UAPA.FactConsultorio.WinForms
             // 
             // pnlWorkingArea
             // 
-            this.pnlWorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlWorkingArea.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlWorkingArea.Location = new System.Drawing.Point(191, 0);
             this.pnlWorkingArea.Name = "pnlWorkingArea";
             this.pnlWorkingArea.Size = new System.Drawing.Size(830, 542);

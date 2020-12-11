@@ -8,6 +8,7 @@ namespace UAPA.FactConsultorio.Domain.Interfaces
     public interface IUnitOfWork : IDisposable
     {
         IRepository<User> UsersRepo { get;}
+        IRepository<Patient> PatientsRepo { get; }
 
         void Complete();
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UAPA.FactConsultorio.Domain.Entities;
 using UAPA.FactConsultorio.Domain.Enums;
+using UAPA.FactConsultorio.WinForms.Patients;
 
 namespace UAPA.FactConsultorio.WinForms
 {
@@ -45,7 +46,7 @@ namespace UAPA.FactConsultorio.WinForms
                 {
                     TopLevel = false,
                     FormBorderStyle = FormBorderStyle.None,
-                    Dock = DockStyle.Fill
+                    Dock = DockStyle.Fill,
                 };
 
                 pnlWorkingArea.Controls.Add(childForm);
@@ -58,7 +59,7 @@ namespace UAPA.FactConsultorio.WinForms
 
         private void btnPatients_Click(object sender, EventArgs e)
         {
-            OpenChildForm<PatientForm>();
+            OpenChildForm<FormPatients>();
         }
     }
 }
