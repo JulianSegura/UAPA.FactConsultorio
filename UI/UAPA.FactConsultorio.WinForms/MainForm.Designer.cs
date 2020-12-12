@@ -39,6 +39,7 @@ namespace UAPA.FactConsultorio.WinForms
             this.lblUserRole = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.pbUserPicture = new System.Windows.Forms.PictureBox();
+            this.pnlWorkingArea = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.pnlUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserPicture)).BeginInit();
@@ -107,6 +108,7 @@ namespace UAPA.FactConsultorio.WinForms
             this.btnPatients.Text = "Pacientes";
             this.btnPatients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPatients.UseVisualStyleBackColor = false;
+            this.btnPatients.Click += new System.EventHandler(this.btnPatients_Click);
             // 
             // btnInvoicing
             // 
@@ -167,12 +169,23 @@ namespace UAPA.FactConsultorio.WinForms
             this.pbUserPicture.TabIndex = 0;
             this.pbUserPicture.TabStop = false;
             // 
+            // pnlWorkingArea
+            // 
+            this.pnlWorkingArea.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlWorkingArea.Location = new System.Drawing.Point(191, 0);
+            this.pnlWorkingArea.Name = "pnlWorkingArea";
+            this.pnlWorkingArea.Size = new System.Drawing.Size(830, 542);
+            this.pnlWorkingArea.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1021, 542);
+            this.Controls.Add(this.pnlWorkingArea);
             this.Controls.Add(this.pnlMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -200,6 +213,7 @@ namespace UAPA.FactConsultorio.WinForms
         private System.Windows.Forms.Button btnSysAdmin;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnPatients;
+        private System.Windows.Forms.Panel pnlWorkingArea;
     }
 }
 

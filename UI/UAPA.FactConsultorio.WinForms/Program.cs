@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UAPA.FactConsultorio.WinForms.Patients;
 
 namespace UAPA.FactConsultorio.WinForms
 {
@@ -16,7 +17,7 @@ namespace UAPA.FactConsultorio.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new MainForm());
         }
     }
 }
