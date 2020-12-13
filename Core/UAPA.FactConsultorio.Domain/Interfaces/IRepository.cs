@@ -10,7 +10,7 @@ namespace UAPA.FactConsultorio.Domain.Interfaces
         T GetById(int id);
         ICollection<T> GetAll();
         ICollection<T> Get(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = "");
-        void Add(T entity, int userId);
+        void Add(T entity);
         void Update(T entity, int userId);
         bool Exists(int id);
         void Delete(int id, int userId);//Update enabled=false

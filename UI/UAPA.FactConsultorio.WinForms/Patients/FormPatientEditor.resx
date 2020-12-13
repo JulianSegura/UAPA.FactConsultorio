@@ -120,16 +120,16 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAABxYAAAcWAeOaav4AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABs0lEQVRIS7WWy0rDQBSG8xIuvOKj1KQqBW/LQiZFEQStl2WfwaU7pdKFK63UpJRqN27duBPUik/g
-        sq27NtT/TEehM8cmofSHD5Kemf8kJ2dmao1SupZbSPvukRO4DScQTfCtwLXbsKvicCXIzqvh8WXXcrNO
-        VVzAqAf6EYTpQJRT/vaimj5aji+2MKmjmcShvVQVG8qGF576BANDbWISMNc7VnbDUk8+jvkvofEmqYo7
-        h0BkWTbrexIuptFermZnlD26JRAlZpBB8fVGwsUYigNztCJu4nRLv/R2K+FiDD2qjEUfhQmyJEwAvDwS
-        iAczwJM0AUpfp/p/ckGO5G8gmvQGRvfsPhbwMa8Nnr9eJFyM5ug+oDPpBC1K8KH9+C9JS2QH3vvkPzJt
-        uVyQI3ECX+xbtJ/jZhILrSsXGgm76CUzwCBhgnNpTpIHDDYobYBB4elUwsU0WqsVMa3sB7J9N4NArFJF
-        EKJ71pXtsNS+NNaBQ2e4suNFhwUGRpaLoeXcuWvKZrQy5Z0p/Gs4w6SuZsKBQ9+9MmoeR4OTzsujy+5p
-        VcKMtpUOXdMiwkMc/LUiK8v6ARSMYIuobzT2AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
+        FgAABxYB45pq/gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGzSURBVEhLtZbL
+        SsNAFIbzEi684qPUpCoFb8tCJkURBK2XZZ/BpTul0oUrrdSklGo3bt24E9SKT+Cyrbs21P9MR6Ezxyah
+        9IcPkp6Z/yQnZ2ZqjVK6lltI++6RE7gNJxBN8K3Atduwq+JwJcjOq+HxZddys05VXMCoB/oRhOlAlFP+
+        9qKaPlqOL7YwqaOZxKG9VBUbyoYXnvoEA0NtYhIw1ztWdsNSTz6O+S+h8SapijuHQGRZNut7Ei6m0V6u
+        ZmeUPbolECVmkEHx9UbCxRiKA3O0Im7idEu/9HYr4WIMPaqMRR+FCbIkTAC8PBKIBzPAkzQBSl+n+n9y
+        QY7kbyCa9AZG9+w+FvAxrw2ev14kXIzm6D6gM+kELUrwof34L0lLZAfe++Q/Mm25XJAjcQJf7Fu0n+Nm
+        EgutKxcaCbvoJTPAIGGCc2lOkgcMNihtgEHh6VTCxTRaqxUxrewHsn03g0CsUkUQonvWle2w1L401oFD
+        Z7iy40WHBQZGlouh5dy5a8pmtDLlnSn8azjDpK5mwoFD370yah5Hg5POy6PL7mlVwoy2lQ5d0yLCQxz8
+        tSIry/oBFIxgi6hvNPYAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnClearForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -15,12 +15,11 @@ namespace UAPA.FactConsultorio.WinForms.Patients
 {
     public partial class FormPatients : Form
     {
-        //private UnitOfWork _UoW;
+        //ToDo: Arreglar el Tab Order para flujo sin teclado
         private PatientService _patientService;
         public FormPatients()
         {
             InitializeComponent();
-            //_UoW = new UnitOfWork();
             _patientService = new PatientService(new UnitOfWork());
         }
 
@@ -37,6 +36,8 @@ namespace UAPA.FactConsultorio.WinForms.Patients
 
         private void FormPatients_Load(object sender, EventArgs e)
         {
+            lblSearch.Location = new Point(-4, 62);
+            txtSearch.Location = new Point(0, 82);
             FillDataGrid();
         }
 
@@ -59,16 +60,89 @@ namespace UAPA.FactConsultorio.WinForms.Patients
                     patient.Enabled);
                 dtgPatientsDetails.Rows.Add(newRow);
             }
-
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            using (Form patientEditor=new FormPatientEditor())
+            using (Form patientEditor=new FormPatientEditor(_patientService))
             {
                 CenterToParent();
-                patientEditor.ShowDialog(this); 
+                patientEditor.ShowDialog(this);
+                FillDataGrid();
             }
+        }
+
+        private void UpdatePatient()
+        {
+            int patientId = Convert.ToInt32(dtgPatientsDetails.SelectedRows[0].Cells["PatientId"].Value);
+            var patient = _patientService.GetById(patientId);
+
+            using (Form patientEditor = new FormPatientEditor(_patientService, patient))
+            {
+                CenterToParent();
+                patientEditor.ShowDialog(this);
+                FillDataGrid();
+            };
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            UpdatePatient();
+        }
+
+        private void dtgPatientsDetails_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UpdatePatient();
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text=="Buscar paciente...")
+            {
+                lblSearch.Visible = true;
+                txtSearch.Text = "";
+                txtSearch.Focus();
+            }
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Trim() == "")
+            {
+                lblSearch.Visible = false;
+                txtSearch.Text = "Buscar paciente...";
+            }
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter)&&txtSearch.Text.Trim()!="")
+            {
+                SearchPatients();
+            }
+        }
+
+        private void SearchPatients()
+        {
+            string searchParam = txtSearch.Text.Trim();
+            var patients = _patientService.GetByName(searchParam);
+            FillDataGrid(patients);
+            //ToDo: Agregar funcion para resetear el datagrid cuando se quiera volver a ver toda la lista de pacientes. 
+        }
+
+        private void DeletePatient()
+        {
+            int patientId = Convert.ToInt32(dtgPatientsDetails.SelectedRows[0].Cells["PatientId"].Value);
+
+            var result = _patientService.Delete(patientId);
+            if (result == "Removed") MessageBox.Show("Paciente Eliminado", "FactConsulta", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+            if (result== "Disabled") MessageBox.Show("Existen Recibos A Nombre De Este Paciente, No Se Puede Eliminar\nPaciente Inactivado", "FactConsulta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            FillDataGrid();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeletePatient();
         }
     }
 }

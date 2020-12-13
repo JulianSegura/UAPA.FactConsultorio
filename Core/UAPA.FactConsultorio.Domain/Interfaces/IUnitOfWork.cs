@@ -9,6 +9,7 @@ namespace UAPA.FactConsultorio.Domain.Interfaces
     {
         IRepository<User> UsersRepo { get;}
         IRepository<Patient> PatientsRepo { get; }
+        IRepository<Receipt> ReceiptsRepo { get; }
 
         void Complete();
     }

@@ -13,6 +13,6 @@ namespace UAPA.FactConsultorio.Domain
     {
         public DateTime DateCreated { get; set; }
         public int UpdatedBy { get; set; }
-        public DateTime DateUpdated { get; set; } = DateTime.UtcNow;
+        public DateTime DateUpdated { get; set; }
     }
 }

@@ -25,12 +25,12 @@ namespace UAPA.FactConsultorio.Services
             try
             {
                 user.UserName=user.UserName.ToUpper();
-                user.Password = EncodeText(user.Password);
-                _usersRepo.Add(user, LoggedUser.UserId);
+                user.Password = HashPassword(user.Password);
+                _usersRepo.Add(user);
                 _UoW.Complete();
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
@@ -56,7 +56,7 @@ namespace UAPA.FactConsultorio.Services
             {
                 login.UserName = login.UserName.ToUpper();
                 var user=_usersRepo.Get(u => u.UserName == login.UserName).FirstOrDefault();
-                if (user != null && user.Enabled && user.Password == EncodeText(login.Password))
+                if (user != null && user.Enabled && user.Password == HashPassword(login.Password))
                 {
                     LoggedUser.UserId = user.Id;
                     LoggedUser.Name = user.Name;
@@ -71,7 +71,7 @@ namespace UAPA.FactConsultorio.Services
             }
         }
 
-        private string EncodeText(string text)
+        private string HashPassword(string text)
         {
             byte[] textToEncodeBytes = ASCIIEncoding.ASCII.GetBytes(text);
             textToEncodeBytes = new System.Security.Cryptography.SHA256Managed().ComputeHash(textToEncodeBytes);
