@@ -45,13 +45,12 @@ namespace UAPA.FactConsultorio.Data
 
         }
 
-        public virtual void Add(T entity, int userId)
+        public virtual void Add(T entity)
         {
 
             if (entity is AuditableEntityBase e)
             {
                 e.DateCreated = currentTime;
-                e.UpdatedBy = userId;
             }
 
             _dbSet.Add(entity);
@@ -61,6 +60,7 @@ namespace UAPA.FactConsultorio.Data
         {
             if (entity is AuditableEntityBase e)
             {
+                e.DateUpdated = DateTime.Now;
                 e.UpdatedBy = userId;
             }
             _dbSet.Update(entity);
@@ -79,6 +79,7 @@ namespace UAPA.FactConsultorio.Data
 
             if (entity is AuditableEntityBase e)
             {
+                e.DateUpdated = DateTime.Now;
                 e.UpdatedBy = userId;
             }
 

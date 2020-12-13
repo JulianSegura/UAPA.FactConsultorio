@@ -12,6 +12,7 @@ namespace UAPA.FactConsultorio.Data
         private readonly DbContext _context;
         private IRepository<User> _usersRepo;
         private IRepository<Patient> _patientsRepo;
+        private IRepository<Receipt> _receiptsRepo;
 
         public UnitOfWork()
         {
@@ -19,7 +20,8 @@ namespace UAPA.FactConsultorio.Data
         }
 
         public IRepository<User> UsersRepo => _usersRepo??=new GenericRepository<User>(_context);
-        public IRepository<Patient> PatientsRepo => _patientsRepo ?? new GenericRepository<Patient>(_context);
+        public IRepository<Patient> PatientsRepo => _patientsRepo??= new GenericRepository<Patient>(_context);
+        public IRepository<Receipt> ReceiptsRepo => _receiptsRepo ??= new GenericRepository<Receipt>(_context);
 
         public void Complete()
         {

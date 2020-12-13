@@ -192,7 +192,7 @@ namespace UAPA.FactConsultorio.WinForms
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UAPA - Facturacion Consultorio";
+            this.Text = "UAPA - FactConsulta";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.pnlMenu.ResumeLayout(false);
             this.pnlUserInfo.ResumeLayout(false);
