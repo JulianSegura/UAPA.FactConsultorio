@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UAPA.FactConsultorio.WinForms.Patients;
+using UAPA.FactConsultorio.WinForms.Payments;
 
 namespace UAPA.FactConsultorio.WinForms
 {

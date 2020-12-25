@@ -34,8 +34,8 @@ namespace UAPA.FactConsultorio.WinForms.Patients
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTittle = new System.Windows.Forms.Panel();
-            this.pbCloseForm = new System.Windows.Forms.PictureBox();
             this.lblTittle = new System.Windows.Forms.Label();
+            this.pbCloseForm = new System.Windows.Forms.PictureBox();
             this.dtgPatientsDetails = new System.Windows.Forms.DataGridView();
             this.PatientId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PatientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,13 +56,27 @@ namespace UAPA.FactConsultorio.WinForms.Patients
             // pnlTittle
             // 
             this.pnlTittle.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.pnlTittle.Controls.Add(this.pbCloseForm);
             this.pnlTittle.Controls.Add(this.lblTittle);
+            this.pnlTittle.Controls.Add(this.pbCloseForm);
             this.pnlTittle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTittle.Location = new System.Drawing.Point(0, 0);
             this.pnlTittle.Name = "pnlTittle";
             this.pnlTittle.Size = new System.Drawing.Size(830, 23);
             this.pnlTittle.TabIndex = 0;
+            // 
+            // lblTittle
+            // 
+            this.lblTittle.AutoSize = true;
+            this.lblTittle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTittle.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblTittle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTittle.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTittle.ForeColor = System.Drawing.Color.White;
+            this.lblTittle.Location = new System.Drawing.Point(26, -1);
+            this.lblTittle.Name = "lblTittle";
+            this.lblTittle.Size = new System.Drawing.Size(250, 24);
+            this.lblTittle.TabIndex = 0;
+            this.lblTittle.Text = "Administracion De Pacientes";
             // 
             // pbCloseForm
             // 
@@ -76,22 +90,6 @@ namespace UAPA.FactConsultorio.WinForms.Patients
             this.pbCloseForm.TabStop = false;
             this.pbCloseForm.Click += new System.EventHandler(this.pbCloseForm_Click);
             this.pbCloseForm.MouseEnter += new System.EventHandler(this.pbCloseForm_MouseEnter);
-            // 
-            // lblTittle
-            // 
-            this.lblTittle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTittle.AutoSize = true;
-            this.lblTittle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTittle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTittle.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTittle.ForeColor = System.Drawing.Color.White;
-            this.lblTittle.Location = new System.Drawing.Point(268, 3);
-            this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(250, 24);
-            this.lblTittle.TabIndex = 0;
-            this.lblTittle.Text = "Administracion De Pacientes";
             // 
             // dtgPatientsDetails
             // 

@@ -126,6 +126,7 @@ namespace UAPA.FactConsultorio.WinForms
             this.btnInvoicing.Text = "Facturacion";
             this.btnInvoicing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInvoicing.UseVisualStyleBackColor = false;
+            this.btnInvoicing.Click += new System.EventHandler(this.btnInvoicing_Click);
             // 
             // pnlUserInfo
             // 

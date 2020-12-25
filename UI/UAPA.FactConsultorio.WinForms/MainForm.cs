@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using UAPA.FactConsultorio.Domain.Entities;
 using UAPA.FactConsultorio.Domain.Enums;
 using UAPA.FactConsultorio.WinForms.Patients;
+using UAPA.FactConsultorio.WinForms.Payments;
 
 namespace UAPA.FactConsultorio.WinForms
 {
@@ -60,6 +61,11 @@ namespace UAPA.FactConsultorio.WinForms
         private void btnPatients_Click(object sender, EventArgs e)
         {
             OpenChildForm<FormPatients>();
+        }
+
+        private void btnInvoicing_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<FormInvoice>();
         }
     }
 }

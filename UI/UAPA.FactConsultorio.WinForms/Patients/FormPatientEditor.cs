@@ -24,7 +24,7 @@ namespace UAPA.FactConsultorio.WinForms.Patients
         }
         private void RegisterPatient()
         {
-            if (!InvalidFields()) return;
+            if (InvalidFields()) return;
 
             _patient = new Patient
             {
@@ -46,6 +46,8 @@ namespace UAPA.FactConsultorio.WinForms.Patients
         }
         private void UpdatePatient()
         {
+            if (InvalidFields()) return;
+
             _patient.Name = txtPatientName.Text.Trim();
             _patient.BithDate = dtpBirthDate.Value.Date;
             _patient.PhoneNumber = txtPhoneNumber.Text.Trim();
@@ -64,9 +66,9 @@ namespace UAPA.FactConsultorio.WinForms.Patients
         }
         private bool InvalidFields()
         {
-            if (txtPatientName.Text.Trim() == "") return false;
-            if (dtpBirthDate.Value == DateTime.Today) return false;
-            return true;
+            if (txtPatientName.Text.Trim() == "") return true;
+            if (dtpBirthDate.Value == DateTime.Today) return true;
+            return false;
         }
         private void FormPatientEditor_Load(object sender, EventArgs e)
         {
